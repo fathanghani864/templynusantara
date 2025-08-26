@@ -1,0 +1,530 @@
+:root {
+  --primary: #129990;
+  --secondary: #90d1ca;
+  --accent: #096b68;
+  --body: #fffbde;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  cursor: default;
+  text-decoration: none;
+}
+html {
+  scroll-behavior: smooth;
+}
+section {
+  scroll-margin-top: 150px;
+}
+.navigation a {
+  position: relative;
+  z-index: 9999;
+}
+
+body {
+  background-color: var(--body);
+  width: 100dvw;
+  overflow-x: hidden;
+  font-family: "Poppins", sans-serif;
+  margin: 0;
+  padding: 0;
+}
+
+.navbar .nav {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 calc(16px * 1.618 * 1.618);
+  background-color: var(--secondary);
+  backdrop-filter: blur(calc(16px * 1.618));
+  width: 100dvw;
+  height: 100px;
+  transition: all 250ms ease-in-out;
+}
+
+.navbar .nav.fixed {
+  background-color: rgba(144, 209, 202, 0.7);
+  position: fixed;
+  width: 100dvw;
+  z-index: 999;
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.navbar .nav.fromTop:not(.fixed) {
+  opacity: 0;
+  transform: translateY(-150px);
+}
+
+.navbar .nav img {
+  height: calc(16px * 1.618 * 1.618 * 1.618 * 1.618);
+}
+
+.navbar .nav .hamburger {
+  display: none;
+}
+
+.navbar .nav .navigation {
+  display: flex;
+}
+
+.navbar .nav .navigation a {
+  cursor: pointer;
+  padding: calc(16px * 1.618);
+  color: var(--accent);
+  font-weight: 400;
+  font-size: calc(8px * 1.618 * 1.618);
+}
+
+.navbar .nav .navigation a::after {
+  display: block;
+  content: "";
+  padding-bottom: calc(1px * 1.618);
+  border-bottom: 2px solid var(--accent);
+  transform: scale(0);
+  transition: all 250ms ease-in-out;
+}
+
+.navbar .nav .navigation a:hover::after {
+  transform: scale(1);
+}
+
+.hero {
+  height: 100%;
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  position: relative;
+  z-index: 1;
+  position: relative;
+  width: 100%;
+  overflow: hidden;
+}
+.hero-img {
+  width: 100%;
+  height: 200px;
+  height: auto;
+  object-fit: cover;
+  z-index: 0;
+  position: relative;
+}
+
+.hero .overlay {
+  position: absolute;
+  inset: 0;
+  background-color: rgba(0, 0, 0, 0.1);
+  backdrop-filter: blur(1px);
+  display: flex;
+  flex-direction: column;
+  align-items: start;
+  padding: 32px;
+  gap: 24px;
+  z-index: 2;
+  position: absolute;
+  transition: all 0.5s ease-in-out;
+}
+
+.hero .overlay h1 {
+  text-transform: uppercase;
+  font-size: calc(16px * 1.618 * 1.618 * 1.618 * 1.618);
+  color: var(--primary);
+  margin-top: 200px;
+}
+
+.hero .overlay p {
+  font-size: calc(8px * 1.618 * 1.618);
+  color: black;
+}
+.hero .overlay button:hover {
+  transform: scale(1.05);
+  background-color: var(--primary);
+  color: var(--body);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+}
+
+#informasi {
+  scroll-margin-top: 100px;
+}
+
+.hero .overlay button {
+  background-color: var(--secondary);
+  border: 2px solid var(--accent);
+  font-weight: 700;
+  color: var(--accent);
+  padding: calc(4px * 1.618 * 1.618) calc(8px * 1.618 * 1.618);
+  border-radius: 8px;
+  cursor: pointer;
+  transition: all 250ms ease-in-out;
+  z-index: 10;
+}
+
+.deksripsi {
+  min-width: 1000px;
+}
+
+.hero .overlay button:hover {
+  background-color: var(--primary);
+  color: var(--body);
+}
+
+.hero .overlay button:active {
+  transform: scale(0.95);
+}
+
+@media (max-width: 768px) {
+  .navbar .nav {
+    justify-content: space-around;
+  }
+  .navbar .nav .navigation {
+    display: none;
+  }
+  .navbar .nav .hamburger {
+    width: 30px;
+    height: 25px;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+  }
+  .navbar .nav .hamburger span {
+    display: block;
+    height: 4px;
+    width: 100%;
+    background-color: var(--accent);
+    border-radius: 16px;
+    transition: all 500ms ease-in-out;
+  }
+  .navbar .nav .hamburger.active span:nth-child(1) {
+    transform: rotate(45deg) translate(5px, 0px);
+  }
+  .navbar .nav .hamburger.active span:nth-child(3) {
+    opacity: 0;
+  }
+  .navbar .nav .hamburger.active span:nth-child(2) {
+    transform: rotate(-45deg) translate(7px, -5px);
+  }
+  .navbar .nav .navigation.show {
+    display: flex;
+    flex-direction: column;
+    gap: calc(16px * 1.618);
+    background-color: var(--secondary);
+    position: absolute;
+    top: 110px;
+    right: 0px;
+    padding: 16px;
+    z-index: 1000;
+    min-height: 100dvh;
+  }
+  .navbar .nav.fixed .navigation.show {
+    border-left: 3px solid var(--primary);
+    background-color: rgba(144, 209, 202, 0.7);
+  }
+  .hero .overlay p {
+    font-size: calc(8px * 1.618 * 1.618);
+  }
+  .hero .overlay h1 {
+    font-size: calc(16px * 1.618 * 1.618 * 1.618);
+  }
+}
+
+.container {
+  display: flex;
+  gap: calc(16px * 1.618);
+  /* margin: 30px auto; */
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+.card {
+  width: 350px;
+  height: 700px;
+  background-color: white;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  border-left: 5px solid #2a9d8f;
+  margin-bottom: 100px;
+}
+
+.card-img {
+  width: 100%;
+  height: 250px;
+  object-fit: cover; /* Supaya gambar pas di area */
+}
+
+.card-content {
+  padding: 16px;
+  text-align: center;
+  flex: 1; /* Mengisi sisa ruang secara proporsional */
+  display: flex;
+  flex-direction: column;
+  justify-content: center; /* Tengah secara vertikal */
+}
+
+.card-title {
+  margin: 0;
+  font-size: 20px;
+}
+
+.card-description {
+  color: #555;
+  margin: 10px 0 20px 0;
+}
+
+.card-button {
+  background-color: #096b68;
+  color: white;
+  border: none;
+  padding: 10px 16px;
+  border-radius: 8px;
+  cursor: pointer;
+  margin: auto 0 0 20%;
+  transition: transform 0.3s ease;
+  width: 200px;
+}
+
+.card-button:hover {
+  background-color: #129990;
+  transform: scale(1.2);
+}
+.decor-lines-horizontal {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 130%;
+  height: 100%;
+  z-index: 0;
+}
+
+.decor-lines-horizontal span {
+  position: absolute;
+  height: 500px;
+  width: 130%;
+  background: linear-gradient(to right, #ff4e50, #f9d423);
+  opacity: 0.5;
+  border-radius: 999px;
+}
+
+.hline1 {
+  top: 20px;
+  left: -20%;
+  transform: rotate(4deg);
+}
+
+.hline2 {
+  top: 50px;
+  left: -15%;
+  transform: rotate(-5deg);
+}
+
+/* ===== Garis Vertikal ===== */
+.decor-lines-vertical {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 130%;
+  width: 100%;
+  z-index: 0;
+}
+
+.decor-lines-vertical span {
+  position: absolute;
+  width: 500px;
+  height: 130%;
+  background: linear-gradient(to bottom, #6a11cb, #2575fc);
+  opacity: 0.5;
+  border-radius: 999px;
+}
+
+.vline2 {
+  left: 100px;
+  bottom: 5%;
+  transform: rotate(-5deg);
+}
+.vline3 {
+  top: 5%;
+  right: 100px;
+  transform: rotate(-19deg);
+}
+
+/* ===== Konten Judul di Atas Semua ===== */
+.card-header h3 {
+  position: relative;
+  z-index: 1;
+  margin: 0;
+  font-size: 1.2rem;
+}
+
+.text-1 {
+  padding-top: 50px;
+}
+.content6 .footer .footerbawah footer {
+  color: white;
+}
+
+.content6 .footer .footertengah footer {
+  background-color: var(--hover);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 50px;
+  padding: 25.5px 0;
+}
+
+.content6 .footer .footertengah footer p,
+.content6 .footer .footertengah footer {
+  color: white;
+}
+
+.content6 .footer .footertengah footer .thanks ul {
+  list-style: circle;
+  display: flex;
+  gap: 35px;
+}
+
+.content6 .footer .footertengah footer .thanks {
+  padding: 10px;
+}
+
+.content6 .footer .footerbawah {
+  background-color: var(--primary);
+  display: flex;
+  justify-content: center;
+  padding: 25px 0;
+}
+
+.content6 .footer .footeratas p {
+  color: white;
+}
+
+.content6 .footer .footeratas img {
+  width: 75px;
+  height: 75px;
+  border-radius: 25px;
+}
+
+.content6 .footer .footeratas .CC {
+  color: wheat;
+  font-weight: 700;
+  font-family: var(--font-header);
+}
+
+.content6 .footer .footeratas {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  margin-top: 25px;
+  padding: 25px;
+  background-color: var(--secondary);
+  gap: 30px;
+}
+
+.content6 .footer .footeratas .footeratas2 {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  gap: 100px;
+  margin-top: 25px;
+  text-align: center;
+}
+
+.content6 .footer .footeratas .footeratas2 .lebihlanjut a {
+  cursor: pointer;
+
+  /* padding: 10px; /
+    / background-color: black; */
+  color: white;
+  transition: text-decoration 0.3s ease;
+  text-decoration: none;
+}
+.content6 .footer .footeratas .footeratas2 .lebihlanjut a:hover {
+  text-decoration: underline;
+  text-underline-offset: 5px;
+}
+.content6 .footer .footeratas .kesatu p {
+  padding: 15px 0;
+}
+
+.content6 .footer .footeratas .kesatu .gktau {
+  display: flex;
+  flex-direction: column;
+  /* background-color: black; */
+  justify-content: center;
+  gap: 10px;
+  height: 300px;
+}
+
+.content6 footer .footeratas .kesatu .panggil .panggil1,
+.content6 footer .footeratas .kesatu .panggil .panggil2 {
+  display: flex;
+  gap: 10px;
+}
+
+.content6 .footer .footeratas .JL,
+.content6 .footer .footeratas .CR,
+.content6 .footer .footeratas .CL,
+.content6 .footer .footeratas .CM {
+  color: wheat;
+  font-weight: 700;
+  font-family: var(--font-header);
+  margin-bottom: 15px;
+  padding-left: 10px;
+}
+.jualan {
+  margin-top: 50px;
+}
+.logo-row {
+  display: flex;
+  align-items: center; /* biar vertikalnya rata tengah */
+  gap: 20px; /* jarak antar logo */
+}
+/* Kontak panggil ke samping */
+.panggil {
+  display: flex;
+  flex-direction: column; /* ini bikin vertikal */
+  gap: 10px; /* jarak antar baris */
+  align-items: flex-start; /* rata kiri */
+}
+
+.panggil1,
+.panggil2 {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+ul li a {
+  color: white; /* warna teks awal */
+  text-decoration: none;
+  padding: 8px 15px;
+  position: relative;
+  transition: color 0.3s ease;
+}
+
+/* Garis bawah animasi */
+ul li a::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  width: 0;
+  height: 2px;
+  background: #25d366; /* warna garis (bisa ganti) */
+  transition: width 0.3s ease;
+}
+
+/* Saat hover */
+ul li a:hover {
+  color: #25d366; /* warna teks saat hover */
+}
+
+ul li a:hover::after {
+  width: 95%; /* garis muncul penuh */
+}
