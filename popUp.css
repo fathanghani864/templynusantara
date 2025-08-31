@@ -18,15 +18,23 @@
   pointer-events: none;
 }
 
-.popUp {
-  background: #fff;
-  padding: 30px;
-  border-radius: 10px;
+.hero {
+  /* Pastikan Anda menggunakan tinggi minimal untuk menahan konten */
+  min-height: 100vh;
+  /* Atur gambar latar belakang */
+  background-image: url("asset/IMG_8663.jpg");
+  /* Pastikan gambar menutupi seluruh area hero */
+  background-size: cover;
+  /* Posisikan gambar di tengah */
+  background-position: center;
+  /* Hindari pengulangan gambar */
+  background-repeat: no-repeat;
+  /* Jadikan elemen ini sebagai container untuk overlay */
   position: relative;
-  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
-  max-width: 500px;
-  width: 90%;
-  animation: slideDown 0.3s ease-out forwards;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
 }
 
 @keyframes slideDown {

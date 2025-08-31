@@ -3,15 +3,16 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Card Layout</title>
+    <title>TeampleNusantara</title>
     <script src="https://cdn.tailwindcss.com"></script>
     <link rel="stylesheet" href="style.css" />
-      <link rel="stylesheet" href="popUp.css" />
-      <link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap" rel="stylesheet">
-
-
+    <link rel="stylesheet" href="popUp.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap"
+      rel="stylesheet"
+    />
   </head>
   <body
     class="bg-[--body]"
@@ -24,316 +25,420 @@
   >
     <section class="navbar">
       <div class="nav" id="navbar">
-        <img src="asset/Logo_Temnus-Transparent.png" alt="TemNus Logo" class="w-[10]" />
+        <img
+          src="asset/Logo_Temnus-Transparent.png"
+          alt="TemNus Logo"
+          class="w-[10]"
+        />
         <div class="hamburger" id="hamburger">
           <span></span>
           <span></span>
           <span></span>
         </div>
-       <div class="navigation" id="menu">
-  <a href="#hero">Home</a>
-  <a href="#informasi">Tentang Kami</a>
-  <a href="#jualan">Paket</a>
-</div>
-
+        <div class="navigation" id="menu">
+          <a href="#hero">Home</a>
+          <a href="#informasi">Tentang Kami</a>
+          <a href="#jualan">Paket</a>
+        </div>
       </div>
     </section>
-    
-
    <section class="hero" id="hero">
-    <img src="asset/IMG_8663.jpg" alt="">
-      <div class="overlay">
-        <h1> <b>temnus</b></h1>
-          <p>Profesional. Praktis. Siap Pakai <br>
-          Solusi Template Website Bisnis yang Modern <br>dan Siap Digunakan</p>
-        <button class="togglePopUp" onclick="togglePopUp()">Pesan Sekarang</button>
+    <div class="overlay">
+        <h1><b>temnus</b></h1>
+        <p>
+            Profesional. Praktis. Siap Pakai <br />
+            Solusi Template Website Bisnis yang Modern <br />dan Siap Digunakan
+        </p>
+        <button class="togglePopUp" onclick="togglePopUp()">
+            Pesan Sekarang
+        </button>
+    </div>
+</section>
+
+    <div id="popUp" class="hidePopUp">
+      <div class="popUp">
+        <div class="close-button" onclick="togglePopUp()">X</div>
+        <div class="form-container">
+          <h3>silahkan memesan🥳🥳🥳</h3>
+          <form onsubmit="sendToWhatsApp(event)">
+            <input
+              type="text"
+              id="nama"
+              placeholder="Nama"
+              required
+              style="cursor: text;"
+            />
+
+            <label for="paket">Pilih Paket:</label>
+            <div class="custom-select-wrapper">
+              <div class="select-selected">
+                Paket single
+                <span class="arrow-down">▼</span>
+              </div>
+              <div class="select-items select-hide">
+                <div data-value="Paket single">Paket single</div>
+                <div data-value="Paket santuy">Paket santuy</div>
+                <div data-value="Paket mantap">Paket mantap</div>
+                <div data-value="Paket puas">Paket puas</div>
+              </div>
+              <input type="hidden" id="paket" name="paket" value="Paket single" />
+            </div>
+            <textarea
+              id="request"
+              rows="4"
+              placeholder="Kolom Request,contoh buatin teamplate nya warna putih."
+              required
+              style="cursor: text;"
+            ></textarea>
+            <button type="submit">Kirim ke WhatsApp</button>
+          </form>
+        </div>
       </div>
+    </div>
+
+    <div
+      class="max-w-7xl mx-auto flex flex-col gap-6 px-4 my-7 py-7 scroll-mt-32"
+      id="informasi"
+    >
+      <div class="bg-[--secondary] text-gray-900 rounded-2xl shadow-xl p-6">
+        <div class="flex justify-center items-center mb-6">
+          <div class="bg-white p-4 rounded-full shadow-md">
+            <img
+              src="Asset/Logo_Temnus-Transparent.png"
+              alt="Logo"
+              class="w-20 h-20 object-contain rounded-full mx-auto"
+            />
+          </div>
+        </div>
+
+        <h2 class="font-extrabold mb-2 text-[40px] text-center">
+          Temnus Studio
+        </h2>
+        <p class="text-[--secondary] mb-4 italic text-center">
+          Build. Design. Deliver.
+        </p>
+
+        <p class="leading-relaxed mb-4 text-justify">
+          Kami adalah tim kreatif dan profesional yang berkomitmen membantu Anda
+          memiliki website berkualitas tinggi dengan proses yang mudah dan
+          transparan. Fokus utama kami adalah memberikan solusi digital yang
+          tidak hanya menarik secara visual, tetapi juga efektif dalam
+          mendukung perkembangan bisnis atau personal branding Anda.
+        </p>
+
+        <p class="mb-2 font-semibold">Kami selalu mengutamakan:</p>
+        <ul class="list-disc ml-5 mb-4">
+          <li>✅ Kejujuran dan keterbukaan dalam proses kerja</li>
+          <li>✅ Desain yang modern dan mudah digunakan</li>
+          <li>✅ Dukungan penuh sebelum dan sesudah proyek selesai</li>
+        </ul>
+
+        <p>
+          Percayakan kebutuhan website Anda kepada kami. Bersama, kita wujudkan
+          ide Anda menjadi karya digital yang profesional.
+        </p>
+      </div>
+
+      <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+        <div
+          class="bg-white rounded-xl shadow-md p-5 border-l-4 border-[--accent] transition-all duration-300 hover:shadow-2xl hover:-translate-y-1 hover:border-[--primary]"
+        >
+          <h3 class="text-lg font-semibold text-[--accent] mb-2">
+            Deniz Rizki Atilla
+          </h3>
+          <p class="text-gray-600 mb-3">
+            Web developer berpengalaman dalam HTML, CSS, dan JavaScript. Terbiasa
+            menciptakan tampilan yang rapi, responsif, dan menarik menggunakan
+            Tailwind CSS serta Bootstrap.
+          </p>
+          <ul class="list-disc text-left ml-5 text-gray-600">
+            <li>Web Developer berpengalaman</li>
+            <li>Ahli HTML, CSS, dan JavaScript</li>
+            <li>Membuat tampilan web rapi dan responsif</li>
+            <li>Terbiasa menggunakan Tailwind CSS & Bootstrap</li>
+            <li>Fokus pada desain modern dan user-friendly</li>
+          </ul>
+        </div>
+
+        <div
+          class="bg-white rounded-xl shadow-md p-5 border-l-4 border-[--accent] transition-all duration-300 hover:shadow-2xl hover:-translate-y-1 hover:border-[--primary]"
+        >
+          <h3 class="text-lg font-semibold text-[--accent] mb-2">
+            Aksajreno F H
+          </h3>
+          <p class="text-gray-600 mb-3">
+            Web developer backend yang menguasai JavaScript, PHP, dan MySQL. Siap
+            membangun website dengan fitur lengkap, performa tinggi, dan tampilan
+            yang responsif.
+          </p>
+          <ul class="list-disc text-left ml-5 text-gray-600">
+            <li>Backend developer berpengalaman</li>
+            <li>Menguasai JavaScript, Node.js, PHP, dan MySQL</li>
+            <li>Website menarik dan responsif</li>
+            <li>Menyediakan fitur bermanfaat bagi pengguna dan klien</li>
+          </ul>
+        </div>
+
+        <div
+          class="bg-white rounded-xl shadow-md p-5 border-l-4 border-[--accent] transition-all duration-300 hover:shadow-2xl hover:-translate-y-1 hover:border-[--primary]"
+        >
+          <h3 class="text-lg font-semibold text-[--accent] mb-2">
+            M. Fathan Ghani Hidayat
+          </h3>
+          <p class="text-gray-600 mb-3">
+            Web developer frontend yang ahli dalam HTML dan CSS, serta terbiasa
+            menggunakan Bootstrap dan Tailwind CSS untuk menghasilkan website
+            modern, responsif, dan menarik.
+          </p>
+          <ul class="list-disc text-left ml-5 text-gray-600">
+            <li>Frontend developer berpengalaman</li>
+            <li>Ahli dalam HTML, CSS, dan JavaScript</li>
+            <li>Menguasai Tailwind CSS dan Bootstrap</li>
+            <li>Fokus pada desain yang estetis dan fungsional</li>
+            <li>Menjaga kualitas, keamanan, dan kepuasan klien</li>
+          </ul>
+        </div>
+
+        <div
+          class="bg-white rounded-xl shadow-md p-5 border-l-4 border-[--accent] transition-all duration-300 hover:shadow-2xl hover:-translate-y-1 hover:border-[--primary]"
+        >
+          <h3 class="text-lg font-semibold text-[--accent] mb-2">
+            Anggota Tim Lain
+          </h3>
+          <p class="text-gray-600">
+            Desainer Visual & UI/UX Specialist berpengalaman dalam menciptakan
+            solusi desain yang estetis dan fungsional. Ahli dalam wireframing,
+            desain antarmuka pengguna (UI/UX), pembuatan ikon & logo, serta
+            pemetaan alur pengguna (flow & user charting) untuk pengalaman
+            digital yang intuitif dan menarik.
+          </p>
+          <ul class="list-disc text-left ml-5 text-gray-600">
+            <li>Spesialis Desain Visual & UI/UX</li>
+            <i>Ahli dalam Wireframing dan Prototyping</i>
+            <li>Kreasi Ikon & Logo yang Khas dan Bermakna</li>
+            <li>Pemetaan Alur Pengguna (Flow & User Charting)</li>
+            <li>Fokus pada Estetika, Fungsionalitas, dan Kepuasan Klien</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+    </div>
     </section>
 
-    <!-- PopUp Pesan -->
-   <div id="popUp" class="hidePopUp">
-  <div class="popUp">
-    <div class="close-button " onclick="togglePopUp()">X</div>
-    <div class="form-container">
-      <h3>silahkan memesan🥳🥳🥳</h3>
-      <form onsubmit="sendToWhatsApp(event)">
-        <input type="text" id="nama" placeholder="Nama" required style="cursor: text;" />
-        
-       <label for="paket">Pilih Paket:</label>
-<div class="custom-select-wrapper">
-  <div class="select-selected">
-    Paket single
-    <span class="arrow-down">▼</span>
-  </div>
-  <div class="select-items select-hide">
-    <div data-value="Paket single">Paket single</div>
-    <div data-value="Paket santuy ">Paket santuy</div>
-    <div data-value="Paket mantap">Paket mantap</div>
-    <div data-value="Paket puas">Paket puas</div>
-  </div>
-  <input type="hidden" id="paket" name="paket" value="Paket single">
-</div>
-        <textarea
-          id="request"
-          rows="4"
-          placeholder="Kolom Request,contoh buatin teamplate nya warna putih."
-          required style="cursor: text;"
-        ></textarea>
-        <button type="submit">Kirim ke WhatsApp</button>
-      </form>
-    </div>
-  </div>
-</div>
+    <section id="jualan">
+      <div class="container mx-auto px-4 pe-4 mt-5">
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+          <div
+            class="relative max-w-sm w-full mx-auto group transition hover:scale-105 hover:shadow-xl"
+          >
+            <div
+              class="absolute top-0 right-0 bottom-0 w-2 bg-teal-600 rounded-r-xl transition duration-300 group-hover:bg-teal-700"
+            ></div>
 
-  
- 
-<div class=" max-w-7xl mx-auto flex flex-col gap-6 px-4 my-7 py-7 scroll-mt-32" id="informasi">
-  <!-- Card utama -->
+            <div
+              class="bg-white rounded-2xl p-6 flex flex-col items-center text-center space-y-4 border border-gray-200 min-h-[600px] shadow-lg shadow-teal-200"
+            >
+              <img
+                src="asset/Logo_Temnus.jpg"
+                alt="Logo Temnus"
+                class="w-24 h-24 rounded-full object-cover mx-auto"
+              />
+              <h3 class="text-xl font-bold">Paket Single</h3>
+              <div class="text-sm text-gray-700 space-y-2 flex-1">
+                <p>
+                  <b>Mulai dari Rp 100.000 - Rp 350.000</b> Isi Paket:
+                </p>
+                <ul class="list-disc text-left ml-5">
+                  <li>1 halaman, maksimal 5 section (layout fleksibel)</li>
+                  <li>Section sesuai permintaan klien</li>
+                  <li>Cocok untuk landing page atau profil singkat</li>
+                </ul>
+              </div>
+              <button
+                onclick="togglePopUp()"
+                class="togglePopUp text-white px-6 py-2 rounded-full transition"
+                style="background-color: #129990"
+                onmouseover="this.style.backgroundColor='#0f7d7a'"
+                onmouseout="this.style.backgroundColor='#129990'"
+              >
+                Beli
+              </button>
+            </div>
+          </div>
 
-<div class="bg-[--secondary] text-gray-900 rounded-2xl shadow-xl p-6">
-  <!-- Logo bulat dan center -->
-  <div class="flex justify-center items-center mb-6">
-    <div class="bg-white p-4 rounded-full shadow-md">
-      <img
-        src="Asset/Logo_Temnus-Transparent.png"
-        alt="Logo"
-        class="w-20 h-20 object-contain rounded-full mx-auto"
-      />
-    </div>
-  </div>
+          <div
+            class="relative max-w-sm w-full mx-auto group transition hover:scale-105 hover:shadow-xl"
+          >
+            <div
+              class="absolute top-0 right-0 bottom-0 w-2 bg-teal-600 rounded-r-xl transition duration-300 group-hover:bg-teal-700"
+            ></div>
+            <div
+              class="bg-white rounded-2xl p-6 flex flex-col items-center text-center space-y-4 border border-gray-200 min-h-[600px] shadow-lg shadow-teal-200"
+            >
+              <img
+                src="asset/Logo_Temnus.jpg"
+                alt="Logo Temnus"
+                class="w-24 h-24 rounded-full object-cover mx-auto"
+              />
+              <h3 class="text-xl font-bold">Paket Santuy</h3>
+              <div class="text-sm text-gray-700 space-y-2 flex-1">
+                <p>
+                  <b>Mulai Rp 350.000 - Rp 450.000</b> Isi Paket:
+                </p>
+                <ul class="list-disc text-left ml-5">
+                  <li>3 halaman (.html + .css)</li>
+                  <li>
+                    Tambahan fitur opsional:
+                    <ul class="list-disc ml-5">
+                      <li>Tambah foto sesuai bingkai</li>
+                      <li>Icon & font custom</li>
+                    </ul>
+                  </li>
+                  <li>
+                    Bonus:
+                    <ul class="list-disc ml-5">
+                      <li>UI & warna (Free)</li>
+                      <li>1x revisi ringan (Free)</li>
+                    </ul>
+                  </li>
+                  <li>
+                    Opsional:
+                    <ul class="list-disc ml-5">
+                      <li>Tambah 1x revisi ringan:</li>
+                    </ul>
+                  </li>
+                </ul>
+              </div>
+              <button
+                onclick="togglePopUp()"
+                class="togglePopUp text-white px-6 py-2 rounded-full transition"
+                style="background-color: #129990"
+                onmouseover="this.style.backgroundColor='#0f7d7a'"
+                onmouseout="this.style.backgroundColor='#129990'"
+              >
+                Beli
+              </button>
+            </div>
+          </div>
 
-  <!-- Judul & Tagline center -->
-  <h2 class="font-extrabold mb-2 text-[40px] text-center">Temnus Studio</h2>
-  <p class="text-[--secondary] mb-4 italic text-center">Build. Design. Deliver.</p>
+          <div
+            class="relative max-w-sm w-full mx-auto group transition hover:scale-105 hover:shadow-xl"
+          >
+            <div
+              class="absolute top-0 right-0 bottom-0 w-2 bg-teal-600 rounded-r-xl transition duration-300 group-hover:bg-teal-700"
+            ></div>
+            <div
+              class="bg-white rounded-2xl p-6 flex flex-col items-center text-center space-y-4 border border-gray-200 min-h-[600px] shadow-lg shadow-teal-200"
+            >
+              <img
+                src="asset/Logo_Temnus.jpg"
+                alt="Logo Temnus"
+                class="w-24 h-24 rounded-full object-cover mx-auto"
+              />
+              <h3 class="text-xl font-bold">Paket Mantap</h3>
+              <div class="text-sm text-gray-700 space-y-2 flex-1">
+                <p>
+                  <b>Mulai Rp 450.000 - Rp 700.000</b> Isi Paket:
+                </p>
+                <ul class="list-disc text-left ml-5">
+                  <li>HTML + CSS + JS</li>
+                  <li>
+                    Fitur tambahan:
+                    <ul class="list-disc ml-5">
+                      <li>Custom icon (teks)</li>
+                      <li>Navigasi dinamis</li>
+                      <li>Animasi (transisi page)</li>
+                      <li>Fixed image</li>
+                    </ul>
+                  </li>
+                  <li>
+                    Support:
+                    <ul class="list-disc ml-5">
+                      <li>2x revisi ringan (Free)</li>
+                      <li>Tambah 1x revisi</li>
+                    </ul>
+                  </li>
+                </ul>
+              </div>
+              <button
+                onclick="togglePopUp()"
+                class="togglePopUp text-white px-6 py-2 rounded-full transition"
+                style="background-color: #129990"
+                onmouseover="this.style.backgroundColor='#0f7d7a'"
+                onmouseout="this.style.backgroundColor='#129990'"
+              >
+                Beli
+              </button>
+            </div>
+          </div>
 
-  <!-- Deskripsi -->
-  <p class="leading-relaxed mb-4 text-justify">
-    Kami adalah tim kreatif dan profesional yang berkomitmen membantu Anda memiliki website berkualitas tinggi dengan proses yang mudah dan transparan. Fokus utama kami adalah memberikan solusi digital yang tidak hanya menarik secara visual, tetapi juga efektif dalam mendukung perkembangan bisnis atau personal branding Anda.
-  </p>
-
-  <p class="mb-2 font-semibold">Kami selalu mengutamakan:</p>
-  <ul class="list-disc ml-5 mb-4">
-    <li>✅ Kejujuran dan keterbukaan dalam proses kerja</li>
-    <li>✅ Desain yang modern dan mudah digunakan</li>
-    <li>✅ Dukungan penuh sebelum dan sesudah proyek selesai</li>
-  </ul>
-
-  <p>
-    Percayakan kebutuhan website Anda kepada kami. Bersama, kita wujudkan ide Anda menjadi karya digital yang profesional.
-  </p>
-</div>
-
-
-  <!-- Tim Card -->
-  <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
-    <!-- Card 1 -->
-    <div class="bg-white rounded-xl shadow-md p-5 border-l-4 border-[--accent] transition-all duration-300 hover:shadow-2xl hover:-translate-y-1 hover:border-[--primary]">
-      <h3 class="text-lg font-semibold text-[--accent] mb-2">Deniz Rizki Atilla</h3>
-      <p class="text-gray-600 mb-3">
-        Web developer berpengalaman dalam HTML, CSS, dan JavaScript. Terbiasa menciptakan tampilan yang rapi, responsif, dan menarik menggunakan Tailwind CSS serta Bootstrap.
-      </p>
-      <ul class="list-disc text-left ml-5 text-gray-600">
-        <li>Web Developer berpengalaman</li>
-        <li>Ahli HTML, CSS, dan JavaScript</li>
-        <li>Membuat tampilan web rapi dan responsif</li>
-        <li>Terbiasa menggunakan Tailwind CSS & Bootstrap</li>
-        <li>Fokus pada desain modern dan user-friendly</li>
-      </ul>
-    </div>
-
-    <!-- Card 2 -->
-    <div class="bg-white rounded-xl shadow-md p-5 border-l-4 border-[--accent] transition-all duration-300 hover:shadow-2xl hover:-translate-y-1 hover:border-[--primary]">
-      <h3 class="text-lg font-semibold text-[--accent] mb-2">Aksajreno F H</h3>
-      <p class="text-gray-600 mb-3">
-        Web developer backend yang menguasai JavaScript, PHP, dan MySQL. Siap membangun website dengan fitur lengkap, performa tinggi, dan tampilan yang responsif.
-      </p>
-      <ul class="list-disc text-left ml-5 text-gray-600">
-        <li>Backend developer berpengalaman</li>
-        <li>Menguasai JavaScript, Node.js, PHP, dan MySQL</li>
-        <li>Website menarik dan responsif</li>
-        <li>Menyediakan fitur bermanfaat bagi pengguna dan klien</li>
-      </ul>
-    </div>
-
-    <!-- Card 3 -->
-    <div class="bg-white rounded-xl shadow-md p-5 border-l-4 border-[--accent] transition-all duration-300 hover:shadow-2xl hover:-translate-y-1 hover:border-[--primary]">
-      <h3 class="text-lg font-semibold text-[--accent] mb-2">M. Fathan Ghani Hidayat</h3>
-      <p class="text-gray-600 mb-3">
-        Web developer frontend yang ahli dalam HTML dan CSS, serta terbiasa menggunakan Bootstrap dan Tailwind CSS untuk menghasilkan website modern, responsif, dan menarik.
-      </p>
-      <ul class="list-disc text-left ml-5 text-gray-600">
-        <li>Frontend developer berpengalaman</li>
-        <li>Ahli dalam HTML, CSS, dan JavaScript</li>
-        <li>Menguasai Tailwind CSS dan Bootstrap</li>
-        <li>Fokus pada desain yang estetis dan fungsional</li>
-        <li>Menjaga kualitas, keamanan, dan kepuasan klien</li>
-      </ul>
-    </div>
-
-    <!-- Card 4 (Opsional, bisa disesuaikan) -->
-    <div class="bg-white rounded-xl shadow-md p-5 border-l-4 border-[--accent] transition-all duration-300 hover:shadow-2xl hover:-translate-y-1 hover:border-[--primary]">
-      <h3 class="text-lg font-semibold text-[--accent] mb-2">Anggota Tim Lain</h3>
-      <p class="text-gray-600">
-      Desainer Visual & UI/UX Specialist berpengalaman dalam menciptakan solusi desain yang estetis dan fungsional. Ahli dalam wireframing, desain antarmuka pengguna (UI/UX), pembuatan ikon & logo, serta pemetaan alur pengguna (flow & user charting) untuk pengalaman digital yang intuitif dan menarik.
-      <ul class="list-disc text-left ml-5 text-gray-600">
-       <li>Spesialis Desain Visual & UI/UX</li>
-       <i>Ahli dalam Wireframing dan Prototyping</i> 
-       <li>Kreasi Ikon & Logo yang Khas dan Bermakna</li>
-       <li>Pemetaan Alur Pengguna (Flow & User Charting)</li>
-       <li>Fokus pada Estetika, Fungsionalitas, dan Kepuasan Klien</li>
-      </ul> 
-
-
-
-      </p>
-    </div>
-  </div>
-</div>
-
+          <div
+            class="relative max-w-sm w-full mx-auto group transition hover:scale-105 hover:shadow-xl"
+          >
+            <div
+              class="absolute top-0 right-0 bottom-0 w-2 bg-teal-600 rounded-r-xl transition duration-300 group-hover:bg-teal-700"
+            ></div>
+            <div
+              class="bg-white rounded-2xl p-6 flex flex-col items-center text-center space-y-4 border border-gray-200 min-h-[600px] shadow-lg shadow-teal-200"
+            >
+              <img
+                src="asset/Logo_Temnus.jpg"
+                alt="Logo Temnus"
+                class="w-24 h-24 rounded-full object-cover mx-auto"
+              />
+              <h3 class="text-xl font-bold">Paket Puas</h3>
+              <div class="text-sm text-gray-700 space-y-2 flex-1">
+                <p>
+                  <b>Mulai Rp 700.000</b> (tergantung fitur) Isi Paket:
+                </p>
+                <ul class="list-disc text-left ml-5">
+                  <li>Full stack (HTML + CSS + JS + PHP)</li>
+                  <li>
+                    Tambahan fitur:
+                    <ul class="list-disc ml-5">
+                      <li>Responsif design</li>
+                      <li>Tambah foto/video</li>
+                      <li>Light/Dark mode</li>
+                      <li>Fitur bilingual</li>
+                    </ul>
+                  </li>
+                  <li>
+                    Support:
+                    <ul class="list-disc ml-5">
+                      <li>3x revisi ringan (Free)</li>
+                      <li>
+                        Tambah revisi:
+                        <ul class="list-disc ml-5">
+                          <li>Ringan</li>
+                          <li>Berat</li>
+                        </ul>
+                      </li>
+                    </ul>
+                  </li>
+                </ul>
+              </div>
+              <button
+                onclick="togglePopUp()"
+                class="togglePopUp text-white px-6 py-2 rounded-full transition"
+                style="background-color: #129990"
+                onmouseover="this.style.backgroundColor='#0f7d7a'"
+                onmouseout="this.style.backgroundColor='#129990'"
+              >
+                Beli
+              </button>
+            </div>
+          </div>
         </div>
       </div>
     </section>
 
-    <!-- ini bagian paket -->
-    <section id="jualan">
-
-    <div class="container mx-auto px-4 pe-4 mt-5"  >
-  <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
-
-        <!-- Card 1 -->
-   <div class="relative max-w-sm w-full mx-auto group transition hover:scale-105 hover:shadow-xl">
-  <!-- Garis hijau -->
-  <div class="absolute top-0 right-0 bottom-0 w-2 bg-teal-600 rounded-r-xl transition duration-300 group-hover:bg-teal-700"></div>
-
-  <!-- Card content -->
-  <div class="bg-white rounded-2xl p-6 flex flex-col items-center text-center space-y-4 border border-gray-200 min-h-[600px] shadow-lg shadow-teal-200">
-    <img
-      src="asset/Logo_Temnus.jpg"
-      alt="Logo Temnus"
-      class="w-24 h-24 rounded-full object-cover mx-auto"
-    />
-    <h3 class="text-xl font-bold">Paket Single</h3>
-    <div class="text-sm text-gray-700 space-y-2 flex-1">
-      <p><b>Mulai dari Rp 100.000 - Rp 350.000</b> Isi Paket:</p>
-      <ul class="list-disc text-left ml-5">
-        <li>1 halaman, maksimal 5 section (layout fleksibel)</li>
-        <li>Section sesuai permintaan klien</li>
-        <li>Cocok untuk landing page atau profil singkat</li>
-      </ul>
-    </div>
-    <button   onclick="togglePopUp()" class=" togglePopUp text-white px-6 py-2 rounded-full transition" style="background-color:#129990" onmouseover="this.style.backgroundColor='#0f7d7a'" onmouseout="this.style.backgroundColor='#129990'">Beli</button>
-  </div>
-</div>
-
-
-        <!-- Card 2 -->
-<div class="relative max-w-sm w-full mx-auto group transition hover:scale-105 hover:shadow-xl">
-  <div class="absolute top-0 right-0 bottom-0 w-2 bg-teal-600 rounded-r-xl transition duration-300 group-hover:bg-teal-700"></div>
-  <div class="bg-white rounded-2xl p-6 flex flex-col items-center text-center space-y-4 border border-gray-200 min-h-[600px] shadow-lg shadow-teal-200">
-    <img src="asset/Logo_Temnus.jpg" alt="Logo Temnus" class="w-24 h-24 rounded-full object-cover mx-auto"/>
-    <h3 class="text-xl font-bold">Paket Santuy</h3>
-    <div class="text-sm text-gray-700 space-y-2 flex-1">
-      <p><b>Mulai Rp 350.000 - Rp 450.000</b> Isi Paket:</p>
-      <ul class="list-disc text-left ml-5">
-        <li>3 halaman (.html + .css)</li>
-        <li>Tambahan fitur opsional:
-          <ul class="list-disc ml-5">
-            <li>Tambah foto sesuai bingkai</li>
-            <li>Icon & font custom</li>
-          </ul>
-        </li>
-        <li>Bonus:
-          <ul class="list-disc ml-5">
-            <li>UI & warna (Free)</li>
-            <li>1x revisi ringan (Free)</li>
-          </ul>
-        </li>
-        <li>Opsional:
-          <ul class="list-disc ml-5">
-            <li>Tambah 1x revisi ringan: </li>
-          </ul>
-        </li>
-      </ul>
-    </div>
-<button   onclick="togglePopUp()" class=" togglePopUp text-white px-6 py-2 rounded-full transition" style="background-color:#129990" onmouseover="this.style.backgroundColor='#0f7d7a'" onmouseout="this.style.backgroundColor='#129990'">Beli</button>
-  </div>
-</div>
-
-<!-- Card 3 -->
-<div class="relative max-w-sm w-full mx-auto group transition hover:scale-105 hover:shadow-xl">
-  <div class="absolute top-0 right-0 bottom-0 w-2 bg-teal-600 rounded-r-xl transition duration-300 group-hover:bg-teal-700"></div>
-  <div class="bg-white rounded-2xl p-6 flex flex-col items-center text-center space-y-4 border border-gray-200 min-h-[600px] shadow-lg shadow-teal-200">
-    <img src="asset/Logo_Temnus.jpg" alt="Logo Temnus" class="w-24 h-24 rounded-full object-cover mx-auto"/>
-    <h3 class="text-xl font-bold">Paket Mantap</h3>
-    <div class="text-sm text-gray-700 space-y-2 flex-1">
-      <p><b>Mulai Rp 450.000 - Rp 700.000</b> Isi Paket:</p>
-      <ul class="list-disc text-left ml-5">
-        <li>HTML + CSS + JS</li>
-        <li>Fitur tambahan:
-          <ul class="list-disc ml-5">
-            <li>Custom icon (teks)</li>
-            <li>Navigasi dinamis</li>
-            <li>Animasi (transisi page)</li>
-            <li>Fixed image</li>
-          </ul>
-        </li>
-        <li>Support:
-          <ul class="list-disc ml-5">
-            <li>2x revisi ringan (Free)</li>
-            <li>Tambah 1x revisi</li>
-          </ul>
-        </li>
-      </ul>
-    </div>
-   <button   onclick="togglePopUp()" class=" togglePopUp text-white px-6 py-2 rounded-full transition" style="background-color:#129990" onmouseover="this.style.backgroundColor='#0f7d7a'" onmouseout="this.style.backgroundColor='#129990'">Beli</button>
-  </div>
-</div>
-
-<!-- Card 4 -->
-<div class="relative max-w-sm w-full mx-auto group transition hover:scale-105 hover:shadow-xl">
-  <div class="absolute top-0 right-0 bottom-0 w-2 bg-teal-600 rounded-r-xl transition duration-300 group-hover:bg-teal-700"></div>
-  <div class="bg-white rounded-2xl p-6 flex flex-col items-center text-center space-y-4 border border-gray-200 min-h-[600px] shadow-lg shadow-teal-200">
-    <img src="asset/Logo_Temnus.jpg" alt="Logo Temnus" class="w-24 h-24 rounded-full object-cover mx-auto"/>
-    <h3 class="text-xl font-bold">Paket Puas</h3>
-    <div class="text-sm text-gray-700 space-y-2 flex-1">
-      <p><b>Mulai Rp 700.000</b> (tergantung fitur) Isi Paket:</p>
-      <ul class="list-disc text-left ml-5">
-        <li>Full stack (HTML + CSS + JS + PHP)</li>
-        <li>Tambahan fitur:
-          <ul class="list-disc ml-5">
-            <li>Responsif design</li>
-            <li>Tambah foto/video</li>
-            <li>Light/Dark mode</li>
-            <li>Fitur bilingual</li>
-          </ul>
-        </li>
-        <li>Support:
-          <ul class="list-disc ml-5">
-            <li>3x revisi ringan (Free)</li>
-            <li>Tambah revisi:
-              <ul class="list-disc ml-5">
-                <li>Ringan</li>
-                <li>Berat</li>
-              </ul>
-            </li>
-          </ul>
-        </li>
-      </ul>
-    </div>
-    <button   onclick="togglePopUp()" class=" togglePopUp text-white px-6 py-2 rounded-full transition" style="background-color:#129990" onmouseover="this.style.backgroundColor='#0f7d7a'" onmouseout="this.style.backgroundColor='#129990'">Beli</button>
-  </div>
-</div>
-      </div></div>
-      </section>
-
-      <!-- resources/views/partials/footer.blade.php -->
-<footer class="bg-gray-900 text-gray-300 pt-12 pb-6 mt-16">
+   <footer class="bg-gray-900 text-gray-300 pt-12 pb-6 mt-16">
     <div class="max-w-7xl mx-auto px-4 grid grid-cols-1 md:grid-cols-4 gap-20">
 
         <!-- Logo & Deskripsi -->
         <div>
         <img src="asset/Logo_Temnus.jpg" alt="" class="h-[100px] w-[100px] rounded-xl">
-            <h3 class="text-xl font-bold text-red-500 mb-3"><b>T</b>eampleNusantara</h3>
+            <h3 class="text-xl font-bold mb-3" style="color:#129990"><b style="color:#129990">T</b>eampleNusantara</h3>
             <p class="text-sm">
               Teamplenusantara adalah penyedia jasa template website profesional yang siap membantu Anda memiliki kehadiran digital yang modern dan efektif. Kami menawarkan solusi praktis untuk bisnis Anda agar dapat membangun website dengan cepat dan mudah
             </p>
@@ -341,7 +446,7 @@
 
         <!-- Navigasi Cepat -->
         <div>
-            <h4 class="text-lg font-semibold text-white mb-3">Navigasi</h4>
+            <h4 class="text-lg font-semibold mb-3" style="color:#129990">Navigasi</h4>
             <ul class="space-y-2 text-sm">
                 <li><a href="#hero" class="hover:text-white">Beranda</a></li>
                 <li><a href="#informasi" class="hover:text-white">Tentang Kami</a></li>
@@ -352,16 +457,16 @@
 
         <!-- Kontak -->
         <div>
-            <h4 class="text-lg font-semibold text-white mb-3">Kontak Kami</h4>
+            <h4 class="text-lg font-semibold mb-3" style="color:#129990">Kontak Kami</h4>
             <p class="text-sm">📞 0852-1235-700</p>
-            <p class="text-sm">📧 teamplynusantara@gmail.com</p>
+            <p class="text-sm">📩 teamplynusantara@gmail.com</p>
             <p class="text-sm">🕒 Senin - Sabtu, 09:00 - 22:00</p>
         </div>
 
         <!-- Sosial Media -->
        <!-- Sosial Media -->
 <div>
-    <h4 class="text-lg font-semibold text-white mb-3">Ikuti Kami</h4>
+    <h4 class="text-lg font-semibold mb-3" style="color:#129990">Ikuti Kami</h4>
     <div class="flex space-x-4 mt-2 text-2xl">
         <a href="javascript:void(0)" onclick="goToInstagram()" class="text-gray-400 hover:text-pink-500">
             <i class="fab fa-instagram"></i>
@@ -379,7 +484,7 @@
     </div>
 
     <div class="mt-10 border-t border-gray-700 pt-4 text-center text-sm text-gray-500">
-        &copy; {{ date('Y') }} Baherindo Motor. All rights reserved.
+        &copy; TeampleNusantara. All rights reserved
     </div>
 </footer>
 

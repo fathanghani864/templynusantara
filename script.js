@@ -1,34 +1,31 @@
+// Mengambil elemen hamburger dan menu
 const h = document.getElementById("hamburger");
 const m = document.getElementById("menu");
 
+// Mengambil elemen navbar
+const n = document.getElementById("navbar");
+
+// Event listener untuk klik pada hamburger
 h.addEventListener("click", () => {
-  m.classList.toggle("show");
+  m.classList.toggle("active");
   h.classList.toggle("active");
 });
 
-const n = document.getElementById("navbar");
-
+// Event listener untuk scroll
 window.addEventListener("scroll", () => {
-  if (
-    document.body.scrollTop > 300 ||
-    document.documentElement.scrollTop > 300
-  ) {
-    n.classList.add("fixed");
+  const scrollPosition =
+    document.body.scrollTop || document.documentElement.scrollTop;
+
+  // Logika untuk menambahkan kelas 'fixed' dan 'fromTop'
+  if (scrollPosition > 300) {
+    n.classList.add("fixed", "fromTop");
   } else {
-    n.classList.remove("fixed");
+    n.classList.remove("fixed", "fromTop");
   }
-  if (
-    document.body.scrollTop > 100 ||
-    document.documentElement.scrollTop > 100
-  ) {
-    n.classList.add("fromTop");
-    if (h.classList.contains("active")) {
-      m.classList.remove("show");
-      h.classList.remove("active");
-    }
-  } else if (n.classList.contains("fixed")) {
-    n.classList.remove("fromTop");
-  } else {
-    n.classList.remove("fromTop");
+
+  // Logika untuk menyembunyikan menu saat di-scroll
+  if (scrollPosition > 100 && h.classList.contains("active")) {
+    m.classList.remove("active");
+    h.classList.remove("active");
   }
 });
