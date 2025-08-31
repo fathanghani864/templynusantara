@@ -34,25 +34,29 @@ body {
   padding: 0;
 }
 
-/* Navbar */
+/* navbar dasar */
 .navbar .nav {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  padding: 0 calc(16px * 1.618 * 1.618);
+  padding: 0 32px;
   background-color: var(--secondary);
-  backdrop-filter: blur(calc(16px * 1.618));
+  backdrop-filter: blur(10px);
   width: 100dvw;
   height: 100px;
   transition: all 250ms ease-in-out;
+  position: relative;
+  z-index: 1000;
 }
 
+/* efek fixed pas scroll */
 .navbar .nav.fixed {
   background-color: rgba(144, 209, 202, 0.7);
   position: fixed;
+  top: 0;
+  left: 0;
   width: 100dvw;
-  z-index: 999;
-  opacity: 1;
+  z-index: 9999;
   transform: translateY(0);
 }
 
@@ -61,37 +65,50 @@ body {
   transform: translateY(-150px);
 }
 
+/* logo */
 .navbar .nav img {
-  height: calc(16px * 1.618 * 1.618 * 1.618 * 1.618);
+  height: 60px;
 }
 
+/* hamburger default (hidden di desktop) */
 .navbar .nav .hamburger {
   display: none;
+  cursor: pointer;
 }
 
+/* navigation default */
 .navbar .nav .navigation {
   display: flex;
+  gap: 24px;
 }
 
 .navbar .nav .navigation a {
   cursor: pointer;
-  padding: calc(16px * 1.618);
+  padding: 12px;
   color: var(--accent);
-  font-weight: 400;
-  font-size: calc(8px * 1.618 * 1.618);
+  font-weight: 500;
+  font-size: 18px;
+  transition: color 0.3s ease;
+  position: relative;
 }
 
 .navbar .nav .navigation a::after {
-  display: block;
   content: "";
-  padding-bottom: calc(1px * 1.618);
-  border-bottom: 2px solid var(--accent);
-  transform: scale(0);
-  transition: all 250ms ease-in-out;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  height: 2px;
+  width: 0%;
+  background: var(--accent);
+  transition: width 0.3s ease-in-out;
+}
+
+.navbar .nav .navigation a:hover {
+  color: var(--primary);
 }
 
 .navbar .nav .navigation a:hover::after {
-  transform: scale(1);
+  width: 100%;
 }
 
 /* Hero Section */
@@ -101,11 +118,9 @@ body {
   background-position: top center; /* Geser ke atas */
   background-repeat: no-repeat;
   background-attachment: scroll; /* atau hapus aja biar ngga ikut scroll */
-}
-@media (max-width: 768px) {
-  .hero {
-    background-position: 70% center; /* geser ke kanan */
-  }
+  min-height: 100vh; /* penuh 1 layar */
+  display: flex;
+  align-items: center; /* teks rata tengah vertikal */
 }
 
 /* Hero Overlay */
@@ -129,8 +144,11 @@ body {
 
 .hero .overlay h1 {
   text-transform: uppercase;
-  font-size: calc(16px * 1.618 * 1.618 * 1.618 * 1.618);
+  font-size: clamp(2.5rem, 8vw, 6rem); /* minimal 2.5rem, maksimal 6rem */
+  font-weight: 800;
   color: var(--primary);
+  margin-top: 0;
+  line-height: 1.1; /* biar rapat dan elegan */
   margin-top: 0;
   text-align: left; /* awal teks dari kiri */
   align-items: flex-start; /* posisi kontainer juga ke kiri */
@@ -171,56 +189,42 @@ body {
 @media (max-width: 768px) {
   .navbar .nav {
     justify-content: space-around;
+    padding: 0 16px;
   }
+
+  /* hamburger aktif */
+  .navbar .nav .hamburger {
+    display: block;
+  }
+
+  /* navigation default hidden */
   .navbar .nav .navigation {
     display: none;
-  }
-  .navbar .nav .hamburger {
-    width: 30px;
-    height: 25px;
-    position: relative;
-    display: flex;
     flex-direction: column;
-    justify-content: space-between;
-  }
-  .navbar .nav .hamburger span {
-    display: block;
-    height: 4px;
-    width: 100%;
-    background-color: var(--accent);
-    border-radius: 16px;
-    transition: all 500ms ease-in-out;
-  }
-  .navbar .nav .hamburger.active span:nth-child(1) {
-    transform: rotate(45deg) translate(5px, 0px);
-  }
-  .navbar .nav .hamburger.active span:nth-child(3) {
-    opacity: 0;
-  }
-  .navbar .nav .hamburger.active span:nth-child(2) {
-    transform: rotate(-45deg) translate(7px, -5px);
-  }
-  .navbar .nav .navigation.show {
-    display: flex;
-    flex-direction: column;
-    gap: calc(16px * 1.618);
+    gap: 16px;
     background-color: var(--secondary);
     position: absolute;
-    top: 110px;
-    right: 0px;
-    padding: 16px;
-    z-index: 1000;
-    min-height: 100dvh;
+    top: 100px;
+    right: 0;
+    padding: 24px;
+    width: 70%;
+    box-shadow: -4px 0 12px rgba(0, 0, 0, 0.2);
   }
+
+  /* saat show */
+  .navbar .nav .navigation.show {
+    display: flex;
+  }
+
+  /* pas navbar fixed + menu terbuka */
   .navbar .nav.fixed .navigation.show {
+    background-color: rgba(144, 209, 202, 0.95);
     border-left: 3px solid var(--primary);
-    background-color: rgba(144, 209, 202, 0.7);
   }
-  .hero .overlay p {
-    font-size: calc(8px * 1.618 * 1.618);
-  }
-  .hero .overlay h1 {
-    font-size: calc(16px * 1.618 * 1.618 * 1.618);
+
+  .navbar .nav .navigation a {
+    font-size: 20px;
+    font-weight: 600;
   }
 }
 
