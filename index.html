@@ -24,167 +24,193 @@
     "
   >
     <section class="navbar">
-    <div class="nav" id="navbar">
-      <img src="asset/Logo_Temnus-Transparent.png" alt="TemNus Logo" class="w-[10]" />
+      <div class="nav" id="navbar">
+        <a href="#" class="text-3xl font-bold tracking-wide">
+          <span class="text-[#1E3A8A]">TEM</span
+          ><span class="text-[#9CA3AF]">NUS</span>
+        </a>
 
-      <div class="hamburger" id="hamburger">
-        <i class="fa-solid fa-bars text-3xl text-[--primary]" id="icon"></i>
+        <div class="hamburger" id="hamburger">
+          <i class="fa-solid fa-bars text-3xl text-[--primary]" id="icon"></i>
+        </div>
+
+        <div class="navigation" id="menu">
+          <a href="#hero">Home</a>
+          <a href="#informasi">Tentang Kami</a>
+          <a href="#jualan">Paket</a>
+        </div>
       </div>
+    </section>
 
-      <div class="navigation" id="menu">
-        <a href="#hero">Home</a>
-        <a href="#informasi">Tentang Kami</a>
-        <a href="#jualan">Paket</a>
-      </div>
-    </div>
-  </section>
+    <section
+      class="relative bg-gradient-to-b from-white to-[--body] min-h-screen flex items-center justify-center overflow-hidden"
+    >
+      <div
+        class="container mx-auto px-6 lg:px-28 grid grid-cols-1 lg:grid-cols-2 gap-20 items-center"
+      >
+        <!-- Text -->
+        <div class="text-center lg:text-left space-y-10 animate-fadeInUp">
+          <h1 class="text-7xl font-extrabold">
+            <span class="text-[#1E3A8A]">TEM</span
+            ><span class="text-[#9CA3AF]">NUS</span>
+          </h1>
 
-   <section class="hero" id="hero">
-    <div class="overlay">
-        <h1><b>temnus</b></h1>
-        <p>
+          <p class="text-2xl text-gray-600 leading-relaxed max-w-2xl">
             Profesional. Praktis. Siap Pakai <br />
-            Solusi Template Website Bisnis yang Modern <br />dan Siap Digunakan
+            Solusi Template Website Bisnis yang Modern <br />
+            dan Siap Digunakan
+          </p>
+          <a
+            href="#pesan"
+            class="inline-block bg-teal-600 text-white px-10 py-5 text-xl rounded-2xl shadow-xl hover:bg-teal-700 transition transform hover:scale-110 hover:shadow-2xl"
+          >
+            Pesan Disini
+          </a>
+        </div>
+
+        <!-- Image -->
+        <div class="flex justify-center lg:justify-end">
+          <img
+            src="asset/IMG_8663-2__1_-removebg-preview.png"
+            alt="Tim Temnus"
+            class="max-w-3xl w-full rounded-2xl shadow-2xl animate-floating"
+          />
+        </div>
+      </div>
+    </section>
+
+    <div
+      class="max-w-7xl mx-auto flex flex-col gap-6 px-4 my-7 py-7 scroll-mt-32"
+      id="informasi"
+    >
+      <!-- Informasi Utama -->
+      <div class="bg-[--secondary] text-gray-900 rounded-2xl shadow-xl p-6">
+        <div class="flex justify-center items-center mb-6">
+          <div class="rounded-full">
+            <imSg
+              src="Asset/Logo_Temnus.jpg"
+              alt="Logo"
+              class="w-32 h-32 object-contain rounded-full mx-auto"
+            />
+          </div>
+        </div>
+
+        <h2 class="font-extrabold mb-2 text-[40px] text-center">
+          Temnus Studio
+        </h2>
+        <p class="text-[--secondary] mb-4 italic text-center">
+          Build. Design. Deliver.
         </p>
-<!-- Ganti bagian "pesan disini" -->
-<a href="popup.html?paket=Paket Single">
-  <button class="mt-4 px-4 py-2 rounded-full text-white font-semibold transition hover:opacity-90"
-    style="background-color: #129990">
-    Pesan Disini
-  </button>
-</a>
 
+        <p class="leading-relaxed mb-4 text-justify">
+          Kami adalah tim kreatif dan profesional yang berkomitmen membantu Anda
+          memiliki website berkualitas tinggi dengan proses yang mudah dan
+          transparan. Fokus utama kami adalah memberikan solusi digital yang
+          tidak hanya menarik secara visual, tetapi juga efektif dalam mendukung
+          perkembangan bisnis atau personal branding Anda.
+        </p>
 
-    </div>
-</section>
+        <p class="mb-2 font-semibold">Kami selalu mengutamakan:</p>
+        <ul class="list-disc ml-5 mb-4">
+          <li>✅ Kejujuran dan keterbukaan dalam proses kerja</li>
+          <li>✅ Desain yang modern dan mudah digunakan</li>
+          <li>✅ Dukungan penuh sebelum dan sesudah proyek selesai</li>
+        </ul>
 
-<div
-  class="max-w-7xl mx-auto flex flex-col gap-6 px-4 my-7 py-7 scroll-mt-32"
-  id="informasi"
->
-  <!-- Informasi Utama -->
-  <div class="bg-[--secondary] text-gray-900 rounded-2xl shadow-xl p-6">
-    <div class="flex justify-center items-center mb-6">
-      <div class="rounded-full">
-        <imSg
-          src="Asset/Logo_Temnus.jpg"
-          alt="Logo"
-          class="w-32 h-32 object-contain rounded-full mx-auto"
-        />
+        <p>
+          Percayakan kebutuhan website Anda kepada kami. Bersama, kita wujudkan
+          ide Anda menjadi karya digital yang profesional.
+        </p>
+      </div>
+
+      <!-- Grid Anggota Tim -->
+      <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+        <!-- Card 1 -->
+        <div
+          class="bg-white rounded-xl shadow-md p-5 border-l-4 border-[--accent] transition-all duration-300 hover:shadow-2xl hover:-translate-y-1 hover:border-[--primary]"
+        >
+          <h3 class="text-lg font-semibold text-[--accent] mb-2">
+            Deniz Rizki Atilla
+          </h3>
+          <p class="text-gray-600 mb-3">
+            Web developer berpengalaman dalam HTML, CSS, dan JavaScript.
+            Terbiasa menciptakan tampilan yang rapi, responsif, dan menarik
+            menggunakan Tailwind CSS serta Bootstrap.
+          </p>
+          <ul class="list-disc text-left ml-5 text-gray-600">
+            <li>Web Developer berpengalaman</li>
+            <li>Ahli HTML, CSS, dan JavaScript</li>
+            <li>Membuat tampilan web rapi dan responsif</li>
+            <li>Terbiasa menggunakan Tailwind CSS & Bootstrap</li>
+            <li>Fokus pada desain modern dan user-friendly</li>
+          </ul>
+        </div>
+
+        <!-- Card 2 -->
+        <div
+          class="bg-white rounded-xl shadow-md p-5 border-l-4 border-[--accent] transition-all duration-300 hover:shadow-2xl hover:-translate-y-1 hover:border-[--primary]"
+        >
+          <h3 class="text-lg font-semibold text-[--accent] mb-2">
+            Aksajreno F H
+          </h3>
+          <p class="text-gray-600 mb-3">
+            Web developer backend yang menguasai JavaScript, PHP, dan MySQL.
+            Siap membangun website dengan fitur lengkap, performa tinggi, dan
+            tampilan yang responsif.
+          </p>
+          <ul class="list-disc text-left ml-5 text-gray-600">
+            <li>Backend developer berpengalaman</li>
+            <li>Menguasai JavaScript, Node.js, PHP, dan MySQL</li>
+            <li>Website menarik dan responsif</li>
+            <li>Menyediakan fitur bermanfaat bagi pengguna dan klien</li>
+          </ul>
+        </div>
+
+        <!-- Card 3 -->
+        <div
+          class="bg-white rounded-xl shadow-md p-5 border-l-4 border-[--accent] transition-all duration-300 hover:shadow-2xl hover:-translate-y-1 hover:border-[--primary]"
+        >
+          <h3 class="text-lg font-semibold text-[--accent] mb-2">
+            M. Fathan Ghani Hidayat
+          </h3>
+          <p class="text-gray-600 mb-3">
+            Web developer frontend yang ahli dalam HTML dan CSS, serta terbiasa
+            menggunakan Bootstrap dan Tailwind CSS untuk menghasilkan website
+            modern, responsif, dan menarik.
+          </p>
+          <ul class="list-disc text-left ml-5 text-gray-600">
+            <li>Frontend developer berpengalaman</li>
+            <li>Ahli dalam HTML, CSS, dan JavaScript</li>
+            <li>Menguasai Tailwind CSS dan Bootstrap</li>
+            <li>Fokus pada desain yang estetis dan fungsional</li>
+            <li>Menjaga kualitas, keamanan, dan kepuasan klien</li>
+          </ul>
+        </div>
+
+        <!-- Card 4 -->
+        <div
+          class="bg-white rounded-xl shadow-md p-5 border-l-4 border-[--accent] transition-all duration-300 hover:shadow-2xl hover:-translate-y-1 hover:border-[--primary]"
+        >
+          <h3 class="text-lg font-semibold text-[--accent] mb-2">
+            Anggota Tim Lain
+          </h3>
+          <p class="text-gray-600 mb-3">
+            Desainer Visual & UI/UX Specialist berpengalaman dalam menciptakan
+            solusi desain yang estetis dan fungsional. Ahli dalam wireframing,
+            desain antarmuka pengguna (UI/UX), pembuatan ikon & logo, serta
+            pemetaan alur pengguna (flow & user charting) untuk pengalaman
+            digital yang intuitif dan menarik.
+          </p>
+          <ul class="list-disc text-left ml-5 text-gray-600">
+            <li>Spesialis Desain Visual & UI/UX</li>
+            <li>Ahli dalam Wireframing dan Prototyping</li>
+            <li>Kreasi Ikon & Logo yang Khas dan Bermakna</li>
+            <li>Pemetaan Alur Pengguna (Flow & User Charting)</li>
+            <li>Fokus pada Estetika, Fungsionalitas, dan Kepuasan Klien</li>
+          </ul>
+        </div>
       </div>
     </div>
-
-    <h2 class="font-extrabold mb-2 text-[40px] text-center">Temnus Studio</h2>
-    <p class="text-[--secondary] mb-4 italic text-center">
-      Build. Design. Deliver.
-    </p>
-
-    <p class="leading-relaxed mb-4 text-justify">
-      Kami adalah tim kreatif dan profesional yang berkomitmen membantu Anda
-      memiliki website berkualitas tinggi dengan proses yang mudah dan
-      transparan. Fokus utama kami adalah memberikan solusi digital yang tidak
-      hanya menarik secara visual, tetapi juga efektif dalam mendukung
-      perkembangan bisnis atau personal branding Anda.
-    </p>
-
-    <p class="mb-2 font-semibold">Kami selalu mengutamakan:</p>
-    <ul class="list-disc ml-5 mb-4">
-      <li>✅ Kejujuran dan keterbukaan dalam proses kerja</li>
-      <li>✅ Desain yang modern dan mudah digunakan</li>
-      <li>✅ Dukungan penuh sebelum dan sesudah proyek selesai</li>
-    </ul>
-
-    <p>
-      Percayakan kebutuhan website Anda kepada kami. Bersama, kita wujudkan ide
-      Anda menjadi karya digital yang profesional.
-    </p>
-  </div>
-
-  <!-- Grid Anggota Tim -->
-  <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
-    <!-- Card 1 -->
-    <div
-      class="bg-white rounded-xl shadow-md p-5 border-l-4 border-[--accent] transition-all duration-300 hover:shadow-2xl hover:-translate-y-1 hover:border-[--primary]"
-    >
-      <h3 class="text-lg font-semibold text-[--accent] mb-2">
-        Deniz Rizki Atilla
-      </h3>
-      <p class="text-gray-600 mb-3">
-        Web developer berpengalaman dalam HTML, CSS, dan JavaScript. Terbiasa
-        menciptakan tampilan yang rapi, responsif, dan menarik menggunakan
-        Tailwind CSS serta Bootstrap.
-      </p>
-      <ul class="list-disc text-left ml-5 text-gray-600">
-        <li>Web Developer berpengalaman</li>
-        <li>Ahli HTML, CSS, dan JavaScript</li>
-        <li>Membuat tampilan web rapi dan responsif</li>
-        <li>Terbiasa menggunakan Tailwind CSS & Bootstrap</li>
-        <li>Fokus pada desain modern dan user-friendly</li>
-      </ul>
-    </div>
-
-    <!-- Card 2 -->
-    <div
-      class="bg-white rounded-xl shadow-md p-5 border-l-4 border-[--accent] transition-all duration-300 hover:shadow-2xl hover:-translate-y-1 hover:border-[--primary]"
-    >
-      <h3 class="text-lg font-semibold text-[--accent] mb-2">Aksajreno F H</h3>
-      <p class="text-gray-600 mb-3">
-        Web developer backend yang menguasai JavaScript, PHP, dan MySQL. Siap
-        membangun website dengan fitur lengkap, performa tinggi, dan tampilan
-        yang responsif.
-      </p>
-      <ul class="list-disc text-left ml-5 text-gray-600">
-        <li>Backend developer berpengalaman</li>
-        <li>Menguasai JavaScript, Node.js, PHP, dan MySQL</li>
-        <li>Website menarik dan responsif</li>
-        <li>Menyediakan fitur bermanfaat bagi pengguna dan klien</li>
-      </ul>
-    </div>
-
-    <!-- Card 3 -->
-    <div
-      class="bg-white rounded-xl shadow-md p-5 border-l-4 border-[--accent] transition-all duration-300 hover:shadow-2xl hover:-translate-y-1 hover:border-[--primary]"
-    >
-      <h3 class="text-lg font-semibold text-[--accent] mb-2">
-        M. Fathan Ghani Hidayat
-      </h3>
-      <p class="text-gray-600 mb-3">
-        Web developer frontend yang ahli dalam HTML dan CSS, serta terbiasa
-        menggunakan Bootstrap dan Tailwind CSS untuk menghasilkan website
-        modern, responsif, dan menarik.
-      </p>
-      <ul class="list-disc text-left ml-5 text-gray-600">
-        <li>Frontend developer berpengalaman</li>
-        <li>Ahli dalam HTML, CSS, dan JavaScript</li>
-        <li>Menguasai Tailwind CSS dan Bootstrap</li>
-        <li>Fokus pada desain yang estetis dan fungsional</li>
-        <li>Menjaga kualitas, keamanan, dan kepuasan klien</li>
-      </ul>
-    </div>
-
-    <!-- Card 4 -->
-    <div
-      class="bg-white rounded-xl shadow-md p-5 border-l-4 border-[--accent] transition-all duration-300 hover:shadow-2xl hover:-translate-y-1 hover:border-[--primary]"
-    >
-      <h3 class="text-lg font-semibold text-[--accent] mb-2">Anggota Tim Lain</h3>
-      <p class="text-gray-600 mb-3">
-        Desainer Visual & UI/UX Specialist berpengalaman dalam menciptakan solusi
-        desain yang estetis dan fungsional. Ahli dalam wireframing, desain
-        antarmuka pengguna (UI/UX), pembuatan ikon & logo, serta pemetaan alur
-        pengguna (flow & user charting) untuk pengalaman digital yang intuitif
-        dan menarik.
-      </p>
-      <ul class="list-disc text-left ml-5 text-gray-600">
-        <li>Spesialis Desain Visual & UI/UX</li>
-        <li>Ahli dalam Wireframing dan Prototyping</li>
-        <li>Kreasi Ikon & Logo yang Khas dan Bermakna</li>
-        <li>Pemetaan Alur Pengguna (Flow & User Charting)</li>
-        <li>Fokus pada Estetika, Fungsionalitas, dan Kepuasan Klien</li>
-      </ul>
-    </div>
-  </div>
-</div>
-
 
     <section id="jualan">
       <div class="container mx-auto px-4 pe-4 mt-5">
@@ -206,22 +232,21 @@
               />
               <h3 class="text-xl font-bold">Paket Single</h3>
               <div class="text-sm text-gray-700 space-y-2 flex-1">
-                <p>
-                  <b>Mulai dari Rp 100.000 - Rp 350.000</b> Isi Paket:
-                </p>
+                <p><b>Mulai dari Rp 100.000 - Rp 350.000</b> Isi Paket:</p>
                 <ul class="list-disc text-left ml-5">
                   <li>1 halaman, maksimal 5 section (layout fleksibel)</li>
                   <li>Section sesuai permintaan klien</li>
                   <li>Cocok untuk landing page atau profil singkat</li>
                 </ul>
               </div>
-<a href="popup.html">
-  <button class="mt-4 px-4 py-2 rounded-full text-white font-semibold transition hover:opacity-90"
-    style="background-color: #129990">
-    Pesan Disini
-  </button>
-</a>
-
+              <a href="popup.html">
+                <button
+                  class="mt-4 px-4 py-2 rounded-full text-white font-semibold transition hover:opacity-90"
+                  style="background-color: #129990"
+                >
+                  Pesan Disini
+                </button>
+              </a>
             </div>
           </div>
 
@@ -241,9 +266,7 @@
               />
               <h3 class="text-xl font-bold">Paket Santuy</h3>
               <div class="text-sm text-gray-700 space-y-2 flex-1">
-                <p>
-                  <b>Mulai Rp 350.000 - Rp 450.000</b> Isi Paket:
-                </p>
+                <p><b>Mulai Rp 350.000 - Rp 450.000</b> Isi Paket:</p>
                 <ul class="list-disc text-left ml-5">
                   <li>3 halaman (.html + .css)</li>
                   <li>
@@ -268,14 +291,15 @@
                   </li>
                 </ul>
               </div>
-          <!-- Ganti bagian "pesan disini" -->
-<a href="popup.html">
-  <button class="mt-4 px-4 py-2 rounded-full text-white font-semibold transition hover:opacity-90"
-    style="background-color: #129990">
-    Pesan Disini
-  </button>
-</a>
-
+              <!-- Ganti bagian "pesan disini" -->
+              <a href="popup.html">
+                <button
+                  class="mt-4 px-4 py-2 rounded-full text-white font-semibold transition hover:opacity-90"
+                  style="background-color: #129990"
+                >
+                  Pesan Disini
+                </button>
+              </a>
             </div>
           </div>
 
@@ -295,9 +319,7 @@
               />
               <h3 class="text-xl font-bold">Paket Mantap</h3>
               <div class="text-sm text-gray-700 space-y-2 flex-1">
-                <p>
-                  <b>Mulai Rp 450.000 - Rp 700.000</b> Isi Paket:
-                </p>
+                <p><b>Mulai Rp 450.000 - Rp 700.000</b> Isi Paket:</p>
                 <ul class="list-disc text-left ml-5">
                   <li>HTML + CSS + JS</li>
                   <li>
@@ -318,14 +340,15 @@
                   </li>
                 </ul>
               </div>
-          <!-- Ganti bagian "pesan disini" -->
-<a href="popup.html">
-  <button class="mt-4 px-4 py-2 rounded-full text-white font-semibold transition hover:opacity-90"
-    style="background-color: #129990">
-    Pesan Disini
-  </button>
-</a>
-
+              <!-- Ganti bagian "pesan disini" -->
+              <a href="popup.html">
+                <button
+                  class="mt-4 px-4 py-2 rounded-full text-white font-semibold transition hover:opacity-90"
+                  style="background-color: #129990"
+                >
+                  Pesan Disini
+                </button>
+              </a>
             </div>
           </div>
 
@@ -345,9 +368,7 @@
               />
               <h3 class="text-xl font-bold">Paket Puas</h3>
               <div class="text-sm text-gray-700 space-y-2 flex-1">
-                <p>
-                  <b>Mulai Rp 700.000</b> (tergantung fitur) Isi Paket:
-                </p>
+                <p><b>Mulai Rp 700.000</b> (tergantung fitur) Isi Paket:</p>
                 <ul class="list-disc text-left ml-5">
                   <li>Full stack (HTML + CSS + JS + PHP)</li>
                   <li>
@@ -374,126 +395,159 @@
                   </li>
                 </ul>
               </div>
-            <!-- Ganti bagian "pesan disini" -->
-<a href="popup.html">
-  <button class="mt-4 px-4 py-2 rounded-full text-white font-semibold transition hover:opacity-90"
-    style="background-color: #129990">
-    Pesan Disini
-  </button>
-</a>
-
+              <!-- Ganti bagian "pesan disini" -->
+              <a href="popup.html">
+                <button
+                  class="mt-4 px-4 py-2 rounded-full text-white font-semibold transition hover:opacity-90"
+                  style="background-color: #129990"
+                >
+                  Pesan Disini
+                </button>
+              </a>
             </div>
           </div>
         </div>
       </div>
     </section>
 
-   <footer class="bg-gray-900 text-gray-300 pt-12 pb-6 mt-16">
-    <div class="max-w-7xl mx-auto px-4 grid grid-cols-1 md:grid-cols-4 gap-20">
-
+    <footer class="bg-gray-900 text-gray-300 pt-12 pb-6 mt-16">
+      <div
+        class="max-w-7xl mx-auto px-4 grid grid-cols-1 md:grid-cols-4 gap-20"
+      >
         <!-- Logo & Deskripsi -->
         <div>
-        <img src="asset/Logo_Temnus.jpg" alt="" class="h-[100px] w-[100px] rounded-xl">
-            <h3 class="text-xl font-bold mb-3" style="color:#129990"><b style="color:#129990">T</b>eampleNusantara</h3>
-            <p class="text-sm">
-              Teamplenusantara adalah penyedia jasa template website profesional yang siap membantu Anda memiliki kehadiran digital yang modern dan efektif. Kami menawarkan solusi praktis untuk bisnis Anda agar dapat membangun website dengan cepat dan mudah
-            </p>
+          <img
+            src="asset/Logo_Temnus.jpg"
+            alt=""
+            class="h-[100px] w-[100px] rounded-xl"
+          />
+          <h3 class="text-xl font-bold mb-3" style="color: #129990">
+            <b style="color: #129990">T</b>eampleNusantara
+          </h3>
+          <p class="text-sm">
+            Teamplenusantara adalah penyedia jasa template website profesional
+            yang siap membantu Anda memiliki kehadiran digital yang modern dan
+            efektif. Kami menawarkan solusi praktis untuk bisnis Anda agar dapat
+            membangun website dengan cepat dan mudah
+          </p>
         </div>
 
         <!-- Navigasi Cepat -->
         <div>
-            <h4 class="text-lg font-semibold mb-3" style="color:#129990">Navigasi</h4>
-            <ul class="space-y-2 text-sm">
-                <li><a href="#hero" class="hover:text-white">Beranda</a></li>
-                <li><a href="#informasi" class="hover:text-white">Tentang Kami</a></li>
-                <li><a href="#jualan" class="hover:text-white">Paket</a></li>
-                <li><a href="#kontak" class="hover:text-white">Kontak</a></li>
-            </ul>
+          <h4 class="text-lg font-semibold mb-3" style="color: #129990">
+            Navigasi
+          </h4>
+          <ul class="space-y-2 text-sm">
+            <li><a href="#hero" class="hover:text-white">Beranda</a></li>
+            <li>
+              <a href="#informasi" class="hover:text-white">Tentang Kami</a>
+            </li>
+            <li><a href="#jualan" class="hover:text-white">Paket</a></li>
+            <li><a href="#kontak" class="hover:text-white">Kontak</a></li>
+          </ul>
         </div>
 
         <!-- Kontak -->
         <div>
-            <h4 class="text-lg font-semibold mb-3" style="color:#129990">Kontak Kami</h4>
-            <p class="text-sm">📞 0852-1235-700</p>
-            <p class="text-sm">📩 teamplynusantara@gmail.com</p>
-            <p class="text-sm">🕒 Senin - Sabtu, 09:00 - 22:00</p>
+          <h4 class="text-lg font-semibold mb-3" style="color: #129990">
+            Kontak Kami
+          </h4>
+          <p class="text-sm">📞 0852-1235-700</p>
+          <p class="text-sm">📩 teamplynusantara@gmail.com</p>
+          <p class="text-sm">🕒 Senin - Sabtu, 09:00 - 22:00</p>
         </div>
 
         <!-- Sosial Media -->
-       <!-- Sosial Media -->
-<div>
-    <h4 class="text-lg font-semibold mb-3" style="color:#129990">Ikuti Kami</h4>
-    <div class="flex space-x-4 mt-2 text-2xl">
-        <a href="javascript:void(0)" onclick="goToInstagram()" class="text-gray-400 hover:text-pink-500">
-            <i class="fab fa-instagram"></i>
-        </a>
-        <a href="javascript:void(0)" onclick="goToWhatsAppDirect()" class="text-gray-400 hover:text-green-500">
-            <i class="fab fa-whatsapp"></i>
-        </a>
-        <a href="javascript:void(0)" onclick="goToTikTok()" class="text-gray-400 hover:text-white">
-            <i class="fab fa-tiktok"></i>
-        </a>
-    </div>
-</div>
+        <!-- Sosial Media -->
+        <div>
+          <h4 class="text-lg font-semibold mb-3" style="color: #129990">
+            Ikuti Kami
+          </h4>
+          <div class="flex space-x-4 mt-2 text-2xl">
+            <a
+              href="javascript:void(0)"
+              onclick="goToInstagram()"
+              class="text-gray-400 hover:text-pink-500"
+            >
+              <i class="fab fa-instagram"></i>
+            </a>
+            <a
+              href="javascript:void(0)"
+              onclick="goToWhatsAppDirect()"
+              class="text-gray-400 hover:text-green-500"
+            >
+              <i class="fab fa-whatsapp"></i>
+            </a>
+            <a
+              href="javascript:void(0)"
+              onclick="goToTikTok()"
+              class="text-gray-400 hover:text-white"
+            >
+              <i class="fab fa-tiktok"></i>
+            </a>
+          </div>
+        </div>
+      </div>
 
-
-    </div>
-
-    <div class="mt-10 border-t border-gray-700 pt-4 text-center text-sm text-gray-500">
+      <div
+        class="mt-10 border-t border-gray-700 pt-4 text-center text-sm text-gray-500"
+      >
         &copy; TeampleNusantara. All rights reserved
-    </div>
-</footer>
+      </div>
+    </footer>
 
-   
-<script src="https://kit.fontawesome.com/238d610e85.js" crossorigin="anonymous"></script>
+    <script
+      src="https://kit.fontawesome.com/238d610e85.js"
+      crossorigin="anonymous"
+    ></script>
     <script src="script.js"></script>
     <script src="popUp.js"></script>
 
     <script>
-  // Function untuk menampilkan dan menyembunyikan pop-up
-  function togglePopUp() {
-    const popUp = document.getElementById("popUp");
-    popUp.classList.toggle("hidePopUp");
-  }
+      // Function untuk menampilkan dan menyembunyikan pop-up
+      function togglePopUp() {
+        const popUp = document.getElementById("popUp");
+        popUp.classList.toggle("hidePopUp");
+      }
 
-  // Function untuk mengirim data form ke WhatsApp
-  function sendToWhatsApp(event) {
-    event.preventDefault();
+      // Function untuk mengirim data form ke WhatsApp
+      function sendToWhatsApp(event) {
+        event.preventDefault();
 
-    const nama = document.getElementById("nama").value;
-    const paket = document.getElementById("paket").value;
-    const request = document.getElementById("request").value;
+        const nama = document.getElementById("nama").value;
+        const paket = document.getElementById("paket").value;
+        const request = document.getElementById("request").value;
 
-    const noWaTujuan = "6285212350700"; // Format internasional untuk 087774375755
+        const noWaTujuan = "6285212350700"; // Format internasional untuk 087774375755
 
-    // Buat pesan yang rapi dengan baris baru (%0A)
-    const pesan =
-      `Halo admin, Nama saya ${nama} saya ingin memesan:\n` +
-      `Paket: ${paket}\n` +
-      `Request: ${request}`;
+        // Buat pesan yang rapi dengan baris baru (%0A)
+        const pesan =
+          `Halo admin, Nama saya ${nama} saya ingin memesan:\n` +
+          `Paket: ${paket}\n` +
+          `Request: ${request}`;
 
-    // Gunakan encodeURIComponent untuk memastikan pesan aman dan terbaca
-    const url = `https://wa.me/${noWaTujuan}?text=${encodeURIComponent(pesan)}`;
-    
-    // Buka tautan di tab baru
-    window.open(url, "_blank");
-  }
+        // Gunakan encodeURIComponent untuk memastikan pesan aman dan terbaca
+        const url = `https://wa.me/${noWaTujuan}?text=${encodeURIComponent(
+          pesan
+        )}`;
 
-  // Fungsi untuk navigasi ke media sosial
-  function goToInstagram() {
-    window.open("https://www.instagram.com/official_temnus.id/", "_blank");
-  }
+        // Buka tautan di tab baru
+        window.open(url, "_blank");
+      }
 
-  function goToTikTok() {
-    window.open("https://www.tiktok.com/@username", "_blank");
-  }
+      // Fungsi untuk navigasi ke media sosial
+      function goToInstagram() {
+        window.open("https://www.instagram.com/official_temnus.id/", "_blank");
+      }
 
-  // Fungsi untuk mengarahkan langsung ke WhatsApp
-  function goToWhatsAppDirect() {
-    window.open("https://wa.me/6285212350700", "_blank");
-  }
-</script>
+      function goToTikTok() {
+        window.open("https://www.tiktok.com/@username", "_blank");
+      }
 
-
+      // Fungsi untuk mengarahkan langsung ke WhatsApp
+      function goToWhatsAppDirect() {
+        window.open("https://wa.me/6285212350700", "_blank");
+      }
+    </script>
   </body>
 </html>

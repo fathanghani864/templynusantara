@@ -343,3 +343,20 @@ ul li a:hover {
 ul li a:hover::after {
   width: 95%; /* garis muncul penuh */
 }
+
+ @keyframes floating {
+    0% { transform: translateY(0px); }
+    50% { transform: translateY(-20px); }
+    100% { transform: translateY(0px); }
+  }
+  .animate-floating {
+    animation: floating 5s ease-in-out infinite;
+  }
+
+  @keyframes fadeInUp {
+    0% { opacity: 0; transform: translateY(40px); }
+    100% { opacity: 1; transform: translateY(0); }
+  }
+  .animate-fadeInUp {
+    animation: fadeInUp 1.2s ease-out;
+  }
